@@ -1,0 +1,369 @@
+.navbarComponent {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    /*------------------- NAVBAR LEFT ----------------------*/
+.navbarLeft {
+    flex-basis: 20%;
+}
+
+.navbarMenu-Icon {
+    cursor: pointer;
+}
+
+.navbar-logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar-logo img {
+    width: 40%;
+    min-width: 90px;
+    cursor: pointer;
+}
+
+.sidebar_logo_desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 5% 15px 20px;
+}
+
+.sidebar_logo_desc img {
+    width: 120px;
+}
+
+.link-gray {
+    text-decoration: none;
+    color: black;
+}
+
+    /*------------------- NAVBAR CENTER ----------------------*/
+.navbarCenter {
+    flex-basis: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.navbar_SearchBar {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-color);
+    background: white;
+    border-radius: 6px;
+    padding: 5px 5px 5px 10px;
+}
+
+.navbar_SearchBar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 90%;
+}
+
+.navbar_SearchIcon {
+    background: var(--red-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.navbarCenter-flag {
+    width: 8.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarCenter-flag img {
+    width: 100%;
+    min-width: 40px;
+    border-radius: 4px;
+}
+
+    /*------------------- NAVBAR RIGHT ----------------------*/
+.navbarRight {
+    flex-basis: 35%;
+}
+
+.navbarRight-Components {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--white-color);
+}
+
+.navbarRight-first {
+    padding-right: 10%;
+    margin-right: 10%;
+    border-right: 1px solid var(--main-color);
+}
+
+.Login_text p {
+    font-size: 15px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.Register_text p {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.Register_text p::after {
+    content: "\25BC ";
+    position: absolute;
+    padding: 8px 5px 0;
+    font-size: 12px;
+    color: rgb(208, 208, 208);
+}
+
+.navbarCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.cart_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cart-itemNo {
+    width: 25px;
+    height: 25px;
+    background: var(--red-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.cart-itemNo p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+    /*------------------------ NAVIGATION ---------------------------*/
+.navigation_links {
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    padding-left: 20%;
+    padding-top: 10px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.navigation_links_item {
+    border-bottom: 1px solid transparent;
+}
+
+.navigation_links_item p {
+    font-size: 15px;
+    position: relative;
+}
+
+.navigation_links_item p::after {
+    content: "\25BC ";
+    position: absolute;
+    padding: 5px 5px 0;
+    font-size: 12px;
+    color: rgb(208, 208, 208);
+}
+
+.navigation_links_item:hover {
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+
+    /*-------Not seen in large screen------*/
+.registerIcon, .navbarMenu-Icon, .navbarCart_Icon, .navbarRight_flag, .smallSearch-bar {
+    display: none;
+}
+
+
+
+    /*----------------MEDIA QUERYING---------------*/
+@media screen and (max-width: 1028px) {
+    .navbarComponent {
+        padding: 10px 2%;
+        align-items: normal;
+    }
+
+    .navbarLeft {
+        flex-basis: content;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar-logo img {
+        width: 90px;
+        min-width: 90px;
+        cursor: pointer;
+    }
+    
+    .navbarMenu-Icon {
+        display: block;
+        color: white;
+    }
+
+    .navbarCenter {
+        flex-basis: 55%;
+        gap: 0;
+    }
+
+    .navbar_SearchBar {
+        width: 100%;
+    }
+
+    .navbarCenter-flag {
+        display: none;
+    }
+
+    .navbarRight {
+        flex-basis: auto;
+    }
+
+    .navbarRight-Components {
+        gap: 20px;
+    }
+
+    .navbarRight-first {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: none;
+    }
+
+    .registerIcon {
+        display: block;
+        position: relative;
+    }
+
+    .registerIcon::after {
+        content: "\25BC ";
+        position: absolute;
+        padding: 6px 0 0;
+        font-size: 12px;
+        right: -8px;
+        color: rgb(232, 232, 232);
+    }
+    
+    .navbarCart_Icon {
+        display: block;
+        position: relative;
+    }
+
+    .navbarCart_IconItems {
+        background: var(--red-color);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -8px;
+        right: -4px;
+    }
+
+    .navbarCenter-flag img {
+        display: none;
+    }
+
+    .navbarRight_flag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbarRight_flag img {
+        width: 35px;
+        border-radius: 3px;
+    }
+
+
+        /*-------Not seen in large screen------*/
+    .Login_text, .Register_text, .navbarCart, .navigation_links {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 730px) {
+     .wrapper {
+        padding-bottom: 8px;
+     }       
+
+    .navbarCenter {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-basis:  content;
+        display: none;
+    }
+
+    .smallSearch-bar {
+        display: block;
+    }
+
+    .smallNavbar_SearchBar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--white-color);
+        background: white;
+        border-radius: 6px;
+        padding: 5px 5px 5px 10px;
+    }
+
+    .smallNavbar_SearchBar input {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        width: 90%;
+    }
+
+
+    /*-------Not seen in large screen------*/
+    .navbar_SearchBar {
+        display: none;
+    }
+
+}

@@ -1,0 +1,43 @@
+:root {
+    --main-color: #F4F5FA;
+    --primary-color: #1D2756;
+    --secondary-color: #CFAE30;
+    --red-color: #ff0000;
+    --white-color: #fff;
+    --black-color: #161616;
+}
+
+
+
+.layoutContainer {
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--main-color);
+}
+
+.topbar {
+    padding: 0 3%;
+    background: var(--primary-color);
+}
+
+.main-body {
+    padding: 0 3%;
+}
+
+.footer {
+    padding: 0 3%;
+    background: var(--black-color);
+}
+
+
+
+
+@media screen and (max-width: 730px) {
+    .topbar {
+        padding: 0 2%;
+    }
+
+    .main-body {
+        padding: 0 4%; 
+    }
+}
