@@ -47,7 +47,7 @@ const Footer = () => {
               </div>
               <div className="footerLinks-icon">
                 <Email />
-                <p>zealenergy@gmail.com us</p>
+                <p>zeal@zeal.co.tz</p>
               </div>
             </div>
           </div>
@@ -80,8 +80,6 @@ const Footer = () => {
 
       <div className="footer_bottom">
         <p>Copyright ©2024, Zeal energy</p>
-        <p>All rights reserved</p>
-        <p>Terms and Conditions</p>
         <p>Local Support: 701 Brooks Avenue South, Thief River Falls, MN 546 TZ</p>
       </div>
     </div>

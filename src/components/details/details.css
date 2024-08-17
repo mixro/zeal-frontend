@@ -116,7 +116,42 @@
     height: 100%;
     object-fit: cover;
 }
-      
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* highlighting */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+    color: white;
+    font-size: 28px;
+
+    /* highlighting */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 
 
 
@@ -145,6 +180,24 @@
     }
 
     .our_business {
+        padding: 20px 4%;
+        text-align: center;
+    }
+
+    .our_business {
         flex-direction: column;
+    }
+
+    .ourBusiness-left h2 {
+        text-align: center;
+    }
+
+    .ourBusiness_button {
+        padding-top: 30px;
+    }
+
+    .ourBusiness_button button {
+        padding: 3px 20px;
+        font-size: 15px;
     }
 }

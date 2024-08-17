@@ -90,11 +90,23 @@
     }
 
     .footerTop_Item {
-        padding-bottom: 3%;
+        padding-bottom: 8%;
     }
 
     .footerTop_Item h2 {
         font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .footerTop_right {
+        padding-bottom: 6%;
+    }
+
+    .footer_bottom {
+        padding-top: 7%;
+    }
+
+    .footer_bottom p:nth-child(1) {
         margin-bottom: 10px;
     }
 }
