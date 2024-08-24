@@ -190,12 +190,12 @@ const Topbar = () => {
                     </Link>
                 </div>
                 <div className="navigation_links_item">
-                    <Link to='/services' className='link-main'>
+                    <Link to='/services-and-installations' className='link-main'>
                         <p>Services & Installations </p>
                     </Link>
                 </div>
                 <div className="navigation_links_item">
-                    <Link to='/products' className='link-main'>
+                    <Link to='/recycling' className='link-main'>
                         <p>Recycling</p>
                     </Link>
                 </div>

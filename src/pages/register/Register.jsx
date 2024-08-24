@@ -6,14 +6,15 @@ const Register = () => {
     <div className="registerContainer">
       <div className="registerTop">
         <div className="registerTop-image">
-          <img src="/assets/zeal-logo-2.png" alt="LOGO" />
-          <p>ZEAL ENERGY</p>
+          <Link to='/' className='link-main'>
+            <img src="/assets/zeal-logo.png" alt="LOGO" />
+          </Link>
         </div>
       </div>
 
       <div className="registerBody">
         <div className="registerBody-container">
-          <h2>REGISTER</h2>
+          <h2>register</h2>
           <div className="registerItems">
             <div className="registerBody_item">
               <h3>Username</h3>
@@ -28,7 +29,7 @@ const Register = () => {
               <input 
                 type="text"
                 className='register-input' 
-                placeholder='eg; johndoe2gmail.com'
+                placeholder='Email'
               />
             </div>
             <div className="registerBody_item">
@@ -36,7 +37,7 @@ const Register = () => {
               <input 
                 type="password"
                 className='register-input' 
-                placeholder='Enter password'
+                placeholder='Password'
               />
             </div>
             <div className="registerBody_item">
@@ -44,9 +45,12 @@ const Register = () => {
               <input 
                 type="password"
                 className='register-input' 
-                placeholder='verify password'
+                placeholder='Verify password'
               />
             </div>
+          </div>
+          <div className="registerButton">
+            <button>REGISTER</button>
           </div>
           <div className="registerText">
             <p>Already a member?

@@ -3,6 +3,11 @@
   color: inherit;
 }
 
+.link-blue {
+  color: blue;
+  cursor: pointer;
+}
+
 .app {
   width: 100vw;
   height: 100vh;

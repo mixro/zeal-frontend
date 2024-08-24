@@ -5,6 +5,9 @@
     --red-color: #ff0000;
     --white-color: #fff;
     --black-color: #161616;
+    --blue-color: #0000ff;
+    --green-color: #008000;
+    --button-color: #268bf6;
 }
 
 
@@ -33,6 +36,18 @@
 
 
 @media screen and (max-width: 730px) {
+    .layoutContainer {
+        
+            /* highlighting */
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
     .topbar {
         padding: 0 2%;
     }

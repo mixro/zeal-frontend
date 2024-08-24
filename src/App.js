@@ -4,6 +4,11 @@ import Home from './pages/home/Home';
 import Layout from './components/layout/Layout';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import Products from './pages/products/Products';
+import Product from './pages/product/Product';
+import Installations from './pages/installations/Installations';
+import Installation from './pages/installation/Installation';
+import Recycling from './pages/recycling/Recycling';
 
 function App() {
   return (
@@ -21,6 +26,13 @@ function App() {
               <Layout>
                 <Routes>
                   <Route index element={<Home />} />
+                  <Route path="/products" element={<Products />} />
+                  <Route path="/product/:id" element={<Product />} />
+
+                  <Route path="/services-and-installations" element={<Installations />} />
+                  <Route path="/services-and-installations/:id" element={<Installation />} />
+
+                  <Route path="/recycling" element={<Recycling />} />
                 </Routes>
               </Layout>
             }

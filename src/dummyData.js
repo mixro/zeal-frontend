@@ -96,20 +96,109 @@ export const SidemenuLinks = [
         id:2,
         icon:<Category />,
         text:"Products",
-        location:"/lessons",
+        location:"/products",
     },
 
     {
         id:3,
         icon:<ElectricalServices />,
         text:"Services",
-        location:"/rooms",
+        location:"/services-and-installations",
     },
 
     {
         id:3,
         icon:<Recycling />,
         text:"Recycling",
-        location:"/rooms",
+        location:"/recycling",
     }
 ];
+
+export const ProductAttributes = [
+    {
+        id:2,
+        type: "Category",
+        description: "Accessories",
+    },
+    {
+        id:3,
+        type: "Manufacturer",
+        description: "Klein Tools, Inc",
+    },
+    {
+        id:4,
+        type: "Series",
+        description: "-",
+    },
+    {
+        id:5,
+        type: "Packaging",
+        description: "Bulk",
+    },
+    {
+        id:6,
+        type: "Part status",
+        description: "Active",
+    },
+    {
+        id:7,
+        type: "Accessory type",
+        description: "Earbud",
+    },
+    {
+        id:8,
+        type: "Color",
+        description: "Black, Orange",
+    },
+    {
+        id:9,
+        type: "Material",
+        description: "Acrylonitrile Butadiene Styrene (ABS)",
+    },
+]
+
+export const AdditionalResources = [
+    {
+        id:1,
+        type: "Other name",
+        desc: "1742-AESEB1S",
+    },
+    {
+        id:2,
+        type: "Standard Packages",
+        desc: "1",
+    },
+]
+
+export const RecyclingStats = [
+    {
+        id:1,
+        header: "Waste",
+        number: 3850.7,
+    },
+    {
+        id:2,
+        header: "Cardboard",
+        number: 2053,
+    },
+    {
+        id:3,
+        header: "Mixed Recycling",
+        number: 654.97,
+    },
+    {
+        id:4,
+        header: "Plastic",
+        number: 240.11,
+    },
+    {
+        id:5,
+        header: "Metal",
+        number: 13.61,
+    },
+    {
+        id:6,
+        header: "Pallet",
+        number: 3.3,
+    },
+]
