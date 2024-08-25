@@ -290,10 +290,15 @@
 
     .productInfo-left {
         padding-bottom: 20px;
+        width: 100%;
     }
 
     .productInfo-right {
         width: 100%;
+    }
+
+    .productInfo-item {
+        justify-content: flex-start;
     }
 
     .product-small-screen {
