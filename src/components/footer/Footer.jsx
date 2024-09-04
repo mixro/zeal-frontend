@@ -79,8 +79,8 @@ const Footer = () => {
       </div>
 
       <div className="footer_bottom">
-        <p>Copyright ©2024, Zeal energy</p>
-        <p>Local Support: 701 Brooks Avenue South, Thief River Falls, MN 546 TZ</p>
+        <p><span>Copyright ©2024</span>, Zeal Energy Systems and Recyclers</p>
+        <p>Local Support: Dar es Salaaam, TZ</p>
       </div>
     </div>
   )

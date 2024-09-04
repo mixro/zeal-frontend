@@ -7,13 +7,14 @@
 .footer_top {
     display: flex;
     padding-bottom: 2%;
+    gap: 8%;
 }
 
 .footerTop_left {
     display: flex;
     justify-content: space-between;
     gap: 5%;
-    flex-basis: 75%;
+    flex-basis: 68%;
     padding-right: 2%;
 }
 
@@ -24,6 +25,7 @@
 .footerTop_Item h2 {
     font-size: 22px;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .footerLinks_div {
@@ -44,6 +46,7 @@
 .footerRight-div h2 {
     font-size: 22px;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .footerRight_Icons {
@@ -60,6 +63,10 @@
 .footer_bottom {
     border-top: 1px solid gray;
     padding-top: 1.5%;
+}
+
+.footer_bottom p span {
+    font-weight: bold;
 }
 
 

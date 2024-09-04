@@ -1,5 +1,6 @@
 :root {
     --main-color: #F4F5FA;
+    --whiter-color: rgb(251, 251, 251);
     --primary-color: #1D2756;
     --secondary-color: #CFAE30;
     --red-color: #ff0000;
@@ -8,6 +9,13 @@
     --blue-color: #0000ff;
     --green-color: #008000;
     --button-color: #268bf6;
+
+    --swiper-background: #e8e8e7ee;
+    --swiper-red: #ff2100;
+    --swiper-blue: #1F6496;
+    --swiper-green: rgb(2, 175, 2);
+
+    --box-shadow: 0.5px 0.5px 5px 0px rgba(0,0,0,0.5);
 }
 
 

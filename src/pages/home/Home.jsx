@@ -19,15 +19,17 @@ const Home = () => {
         <div className="home_top">
           <div className="homeTop_left">
             <div className="homeLeft-top">
-              <p>PRODUCTS</p>
-              <p>VIEW ALL</p>
+              <h2>PRODUCTS</h2>
+              <Link to='/products' className="top-link">
+                <p>VIEW ALL</p>
+              </Link>
             </div>
             
             <div className="home-products-list">
               <div className="homeLeft-Items">
                 {NavigationLinks.map((link) => (
                   <div className="homeLeft-item" id={link.id}>
-                    <Link to={link.path} className="link-main">
+                    <Link to="/products" className="link-main">
                       <p>{link.name}</p>
                     </Link>
                   </div>
@@ -64,31 +66,37 @@ const Home = () => {
             >
               <SwiperSlide>
                 <div className="homeSwiper-container">
-                  <img src="/assets/plc.jpg" alt="PCB" />
+                  <img src="/assets/shipment.jpg" alt="PCB" />
 
                   <div className="homeSwiper-image-desc">
-                    <p>The world's largest selection of electronic component in stock for immediate shipment!</p>
-                    <button>Delivery time and cost</button>
+                    <p><span>I</span>mporting and distributing quality electronic equipments to meet your demands!</p>
+                    <Link to="/products">
+                      <button>Explore products</button>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="homeSwiper-container">
-                  <img src="/assets/pcb.jpg" alt="PCB" />
+                  <img src="/assets/electrical.jpg" alt="PCB" />
 
-                  <div className="homeSwiper-image-desc">
-                    <p>The world's largest selection of electronic component in stock for immediate shipment!</p>
-                    <button>Delivery time and cost</button>
+                  <div className="homeSwiper-image-desc swiper-services-desc">
+                    <p><span>O</span>ffering full range of electrical services to keep your home and business powered up!</p>
+                    <Link to='/services-and-installations'>
+                      <button>Explore Services</button>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="homeSwiper-container">
-                  <img src="/assets/pcb.jpg" alt="PCB" />
+                  <img src="/assets/machines.jpg" alt="PCB" />
 
-                  <div className="homeSwiper-image-desc">
-                    <p>The world's largest selection of electronic component in stock for immediate shipment!</p>
-                    <button>Delivery time and cost</button>
+                  <div className="homeSwiper-image-desc swiper-recycling-desc">
+                    <p><span>C</span>ommitted to sustainable recycling solutions that reduce waste and protect our planet!</p>
+                    <Link to='/recycling'>
+                      <button>Explore recycling</button>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
@@ -101,42 +109,66 @@ const Home = () => {
             <h2>IMPORTING & DISTRIBUTING</h2>
             <div className="companyService_desc">
               <div className="companyService-text">
-                <p>We take pride in offering a wide range of high quality electrical equipment designed to meet the diverse need of our customer. Our products are sourced from reputable manufactures and rigorously tested to ensure reliability, efficiency and safety</p>
+                <ul>
+                  <li>Power Distribution</li>
+                  <li>Electrical Installation</li>
+                  <li>Automation Equipments</li>
+                  <li>Wiring and Cabling</li>
+                  <li>Hardware and Fasteners</li>
+                </ul>
               </div>
               <div className="companyService_image">
-                <img src="/assets/pcb.jpg" alt="IMG" />
+                <img src="/assets/import.png" alt="IMG" />
               </div>
             </div>
             <div className="service_exploreButton">
-              <button>Explore</button>
+              <Link to="/products">
+                <button>Explore</button>
+              </Link>
             </div>
           </div>
           <div className="companyService_Item">
-            <h2>SERVICING & INSTALLATION</h2>
+            <h2>SERVICING & INSTALLATIONS</h2>
             <div className="companyService_desc">
               <div className="companyService-text">
-                <p>We take pride in offering a wide range of high quality electrical equipment designed to meet the diverse need of our customer. Our products are sourced from reputable manufactures and rigorously tested to ensure reliability, efficiency and safety</p>
+                <ul>
+                  <li>System Design</li>
+                  <li>System Installation</li>
+                  <li>Ongoing Maintenance</li>
+                  <li>Service Upgrades</li>
+                  <li>System Inspection</li>
+                </ul>
               </div>
               <div className="companyService_image">
-                <img src="/assets/pcb.jpg" alt="IMG" />
+                <img src="/assets/service-symbol.png" alt="IMG" />
               </div>
             </div>
             <div className="service_exploreButton">
-              <button>Explore</button>
+              <Link to="/services-and-installations">
+                <button>Explore</button>
+              </Link>
             </div>
           </div>
           <div className="companyService_Item">
             <h2>RECYCLING OF MATERIALS</h2>
             <div className="companyService_desc">
               <div className="companyService-text">
-                <p>We take pride in offering a wide range of high quality electrical equipment designed to meet the diverse need of our customer. Our products are sourced from reputable manufactures and rigorously tested to ensure reliability, efficiency and safety</p>
+                <ul>
+                  <li>Material Collection</li>
+                  <li>Sorting and Separation</li>
+                  <li>Cleaning and Preparation</li>
+                  <li>Processing and Refinement</li>
+                  <li>Recycling and Distribution</li>
+                </ul>
               </div>
               <div className="companyService_image">
-                <img src="/assets/pcb.jpg" alt="IMG" />
+                <img src="/assets/recycling-symbol.png" alt="IMG" />
               </div>
             </div>
             <div className="service_exploreButton">
-              <button>Explore</button>
+              <Link to="/recycling">
+                <button>Explore</button>
+              </Link>
             </div>
           </div>
         </div>
