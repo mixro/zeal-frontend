@@ -189,7 +189,7 @@ const Details = () => {
                     keyboard={true}
                     loop={true}
                     autoplay={{
-                        delay: 10000,
+                        delay: 5000,
                         disableOnInteraction: false,
                     }}
                     modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}

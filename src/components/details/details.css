@@ -213,6 +213,10 @@
 
 
 @media screen and (max-width: 730px) {
+    .details_container {
+        padding-bottom: 50px;
+    }
+
     .slider-container {
         margin-right: 4px;
     }
