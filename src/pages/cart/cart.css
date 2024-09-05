@@ -1,0 +1,132 @@
+.cart-container {
+    padding: 3% 0 4%;
+}
+
+.cart-container h1 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+}
+
+
+
+    /*-------------------- cart left ------------------------*/
+.cart-left {
+    flex-basis: 72%;
+}
+
+.cart-item {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 3%;
+    box-shadow: var(--box-shadow);
+    background: var(--whiter-color);
+    margin-bottom: 25px;
+}
+
+.cart-item-left {
+    flex-basis: 20%;
+}
+
+.cart-product-image {
+    width: 100%;
+    display: flex;
+    aspect-ratio: 1/1;
+    align-items: center;
+}
+
+.cart-product-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.cart-item-right p span {
+    font-weight: 500;
+}
+
+.cart-item-right h2 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.cart-delete-button {
+    cursor: pointer;
+    color: blue;
+    padding-top: 10px;
+}
+
+
+
+    /*-------------------- cart right ------------------------*/
+.cart-right {
+    flex-basis: 25%;
+}
+
+.cart-right-container {
+    padding: 20px 15px;
+    border-radius: 5px;
+    background: var(--whiter-color);
+    box-shadow: var(--box-shadow);
+}
+
+.cart-right-container h3 {
+    margin-bottom: 30px;
+    font-size: 21px;
+}
+
+.cart-right-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cart-button {
+    padding-top: 30px;
+}
+
+.cart-button button {
+    width: 100%;
+    background: blue;
+    cursor: pointer;
+    color: var(--white-color);
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+
+
+    /*------------------------- MEDIA QUERYING -------------------------------*/
+@media screen and (max-width: 1028px) {
+    
+}
+
+
+@media screen and (max-width: 730px) {
+    .cart-container {
+        padding: 30px 0;
+    }
+    .cart-wrapper {
+        flex-direction: column;
+    }
+
+    .cart-container h1 {
+        margin-bottom: 25px;
+    }
+
+    .cart-right-container {
+        background: rgb(131, 131, 131);
+    }
+}

@@ -315,9 +315,15 @@
         width: 100%;
     }
 
+    .productsRight_top h2 {
+        font-weight: 500;
+    }
+
+
     .productsItem-name h2 {
         font-size: 22px;
         margin-bottom: 10px;
+        font-weight: 500;
     }
 
     .productsItem-name p {

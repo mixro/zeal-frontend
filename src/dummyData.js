@@ -1,4 +1,4 @@
-import { Category, ElectricalServices, Home, Recycling } from "@mui/icons-material";
+import { Category, ElectricalServices, Favorite, Home, HowToReg, Login, Recycling, ShoppingCart } from "@mui/icons-material";
 
 export const NavigationLinks = [
     {
@@ -113,6 +113,36 @@ export const SidemenuLinks = [
         location:"/recycling",
     }
 ];
+
+export const TopbarMenuLink = [
+    {
+        id: 1,
+        icon: <Favorite />,
+        text: "Wishlist",
+        location: "/wishlist"
+    },
+    {
+        id: 2,
+        icon: <ShoppingCart />,
+        text: "Cart",
+        location: "/cart"
+    }
+]
+
+export const SidemenuLinksBottom = [
+    {
+        id: 1,
+        icon: <HowToReg />,
+        text: "Register",
+        location: "/register"
+    },
+    {
+        id: 2,
+        icon: <Login />,
+        text: "Login",
+        location: "/login"
+    }
+]
 
 export const ProductAttributes = [
     {

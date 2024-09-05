@@ -43,7 +43,31 @@ const Products = () => {
                         </div>
                     </div>
 
-                    <div className="products-filters">
+                    <div className="products-filters products-categories">
+                        <h2>Brands</h2>
+                        <div className="products-category-item">
+                            <p>SIEMENS</p>
+                            <input type="checkbox" />
+                        </div>
+                        <div className="products-category-item">
+                            <p>CH!NT</p>
+                            <input type="checkbox" />
+                        </div>
+                        <div className="products-category-item">
+                            <p>Legrand</p>
+                            <input type="checkbox" />
+                        </div>
+                        <div className="products-category-item">
+                            <p>General Electric</p>
+                            <input type="checkbox" />
+                        </div>
+                        <div className="products-category-item">
+                            <p>ABB</p>
+                            <input type="checkbox" />
+                        </div>
+                    </div>
+
+                    {/* <div className="products-filters">
                         <h2>Filters</h2>
                         <div className="products-filter">
                             <p>Availability</p>
@@ -60,7 +84,7 @@ const Products = () => {
                         <div className="products-filter">
                             <p>Availability</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

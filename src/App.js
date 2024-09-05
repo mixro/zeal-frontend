@@ -9,6 +9,8 @@ import Product from './pages/product/Product';
 import Installations from './pages/installations/Installations';
 import Installation from './pages/installation/Installation';
 import Recycling from './pages/recycling/Recycling';
+import Cart from './pages/cart/Cart';
+import Wishlist from './pages/wishlist/Wishlist';
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
               <Layout>
                 <Routes>
                   <Route index element={<Home />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/wishlist" element={<Wishlist />} />
+                  
                   <Route path="/products" element={<Products />} />
                   <Route path="/product/:id" element={<Product />} />
 

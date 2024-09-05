@@ -4,7 +4,7 @@ import './topbar.css'
 import { DensityMedium, HowToReg, Login, Person, Person2, Search, ShoppingCart } from '@mui/icons-material'
 import { Link } from "react-router-dom";
 import { Box, Divider, List, Drawer, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem } from '@mui/material';
-import { SidemenuLinks } from '../../dummyData';
+import { SidemenuLinks, SidemenuLinksBottom, TopbarMenuLink } from '../../dummyData';
 
 const Topbar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -36,28 +36,58 @@ const Topbar = () => {
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
         >
-          <div className="sidebar_logo">
-            <div className="sidebar_logo_desc">
-              <img src='/assets/zeal-logo-2.png' alt='ZEAL ENERGY' />
+            <div className="sidebar_logo">
+                <div className="sidebar_logo_desc">
+                <img src='/assets/zeal-logo-2.png' alt='ZEAL ENERGY' />
+                </div>
             </div>
-          </div>
-    
-          <Divider />
-    
-          <List>
-            {SidemenuLinks.map((link) => (
-              <ListItem key={link.id}  disablePadding>
-                <Link to={`${link.location}`} className='link-gray'>
-                  <ListItemButton >
-                    <ListItemIcon>
-                      {link.icon}
-                    </ListItemIcon>
-                    <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
-                  </ListItemButton>
-                </Link>
-              </ListItem>
-            ))}
-          </List>
+        
+            <Divider />
+        
+            <List>
+                {SidemenuLinks.map((link) => (
+                <ListItem key={link.id}  disablePadding>
+                    <Link to={`${link.location}`} className='link-gray'>
+                    <ListItemButton >
+                        <ListItemIcon>
+                        {link.icon}
+                        </ListItemIcon>
+                        <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
+                    </ListItemButton>
+                    </Link>
+                </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <List>
+                {TopbarMenuLink.map((link) => (
+                <ListItem key={link.id}  disablePadding>
+                    <Link to={`${link.location}`} className='link-gray'>
+                    <ListItemButton >
+                        <ListItemIcon>
+                        {link.icon}
+                        </ListItemIcon>
+                        <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
+                    </ListItemButton>
+                    </Link>
+                </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <List>
+                {SidemenuLinksBottom.map((link) => (
+                <ListItem key={link.id} disablePadding>
+                    <Link to={`${link.location}`} className='link-gray'>
+                    <ListItemButton >
+                        <ListItemIcon>
+                        {link.icon}
+                        </ListItemIcon>
+                        <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
+                    </ListItemButton>
+                    </Link>
+                </ListItem>
+                ))}
+            </List>
         </Box>
     );
 
@@ -162,22 +192,26 @@ const Topbar = () => {
                         </div>
 
                         <div className="navbarRight_component">
-                            <div className="navbarCart">
-                                <ShoppingCart sx={{fontSize: 34}} />
-                                <div className="cart_items">
-                                    <div className="cart-itemNo">
-                                        <p>3</p>
+                            <Link to='/cart' className='link-main'>
+                                <div className="navbarCart">
+                                    <ShoppingCart sx={{fontSize: 34}} />
+                                    <div className="cart_items">
+                                        <div className="cart-itemNo">
+                                            <p>3</p>
+                                        </div>
+                                        <p>Item(s)</p>
                                     </div>
-                                    <p>Item(s)</p>
                                 </div>
-                            </div>
+                            </Link>
 
-                            <div className="navbarCart_Icon">
-                                <ShoppingCart sx={{fontSize: 30}} />
-                                <div className="navbarCart_IconItems">
-                                    <p>6</p>
+                            <Link to='/cart' className='link-main'>
+                                <div className="navbarCart_Icon">
+                                    <ShoppingCart sx={{fontSize: 30}} />
+                                    <div className="navbarCart_IconItems">
+                                        <p>6</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
