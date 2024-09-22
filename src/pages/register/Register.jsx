@@ -1,7 +1,45 @@
+import { useState } from 'react';
 import './register.css'
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { SignUp } from '../../redux/apiCalls';
 
 const Register = () => {
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [verifiedPassword, setVerifiedPassword] = useState("");
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  // Add state to track input validity
+  const [emailValid, setEmailValid] = useState(true);
+  const [passwordValid, setPasswordValid] = useState(true);
+  const [verifiedPasswordValid, setVerifiedPasswordValid] = useState(true);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { error, isFetching } = useSelector((state) => state.client);
+
+  const handleClick = (e) =>  {
+    e.preventDefault();
+
+    // Validate input fields
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); // Basic email validation
+    const isPasswordValid = password.length >= 6; // Add your password validation logic
+    const isVerifiedPasswordValid = password === verifiedPassword;
+
+    // Update input validity state
+    setEmailValid(isEmailValid);
+    setPasswordValid(isPasswordValid);
+    setVerifiedPasswordValid(isVerifiedPasswordValid);
+
+    // Check if all input fields are valid before proceeding
+    if (isEmailValid && isPasswordValid && isVerifiedPasswordValid) {
+        setButtonClicked(true);
+        SignUp(dispatch, { username, password, email }, navigate);
+    }
+  }
+
   return (
     <div className="registerContainer">
       <div className="registerTop">
@@ -22,6 +60,7 @@ const Register = () => {
                 type="text"
                 className='register-input' 
                 placeholder='Username'
+                onChange={(e) => setUsername(e.target.value)}
               />
             </div>
             <div className="registerBody_item">
@@ -30,7 +69,9 @@ const Register = () => {
                 type="text"
                 className='register-input' 
                 placeholder='Email'
+                onChange={(e) => setEmail(e.target.value)}
               />
+              {!emailValid && <p className="error">Invalid email format.</p>}
             </div>
             <div className="registerBody_item">
               <h3>Password</h3>
@@ -38,7 +79,9 @@ const Register = () => {
                 type="password"
                 className='register-input' 
                 placeholder='Password'
+                onChange={(e) => setPassword(e.target.value)}
               />
+              {!passwordValid && <p className="error">Password is too short, minimum characters should be 6.</p>}
             </div>
             <div className="registerBody_item">
               <h3>Verify password</h3>
@@ -46,11 +89,18 @@ const Register = () => {
                 type="password"
                 className='register-input' 
                 placeholder='Verify password'
+                onChange={(e) => setVerifiedPassword(e.target.value)}
               />
+              {!verifiedPasswordValid && <p className="error">Passwords do not match.</p>}
             </div>
           </div>
           <div className="registerButton">
-            <button>REGISTER</button>
+            <button onClick={handleClick}>{buttonClicked && isFetching ? "Loading.." : "REGISTER"}</button>
+            {buttonClicked && error && 
+              <div className="error">
+                <p>Error while registering, Try again !!</p>
+              </div>
+            }
           </div>
           <div className="registerText">
             <p>Already a member?

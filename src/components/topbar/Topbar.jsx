@@ -1,14 +1,18 @@
 import * as React from 'react';
 import { useState } from 'react';
 import './topbar.css'
-import { DensityMedium, HowToReg, Login, Person, Person2, Search, ShoppingCart } from '@mui/icons-material'
+import { DensityMedium, HowToReg, Login, Person, Search, ShoppingCart } from '@mui/icons-material'
 import { Link } from "react-router-dom";
 import { Box, Divider, List, Drawer, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem } from '@mui/material';
 import { SidemenuLinks, SidemenuLinksBottom, TopbarMenuLink } from '../../dummyData';
+import { useDispatch, useSelector } from 'react-redux';
+import { userLogout } from '../../redux/apiCalls';
 
 const Topbar = () => {
+    const quantity = useSelector((state) => state.clientCart.products);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+    const dispatch = useDispatch();
     const [state, setState] = useState({ top: false, left: false, bottom: false, right: false,});
 
     const ITEM_HEIGHT = 48;
@@ -16,8 +20,13 @@ const Topbar = () => {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        userLogout(dispatch);
+    }
     
-      const handleClose = () => {
+    const handleClose = () => {
         setAnchorEl(null);
     };
 
@@ -38,7 +47,7 @@ const Topbar = () => {
         >
             <div className="sidebar_logo">
                 <div className="sidebar_logo_desc">
-                <img src='/assets/zeal-logo-2.png' alt='ZEAL ENERGY' />
+                    <img src='/assets/zeal-logo-2.png' alt='ZEAL ENERGY' />
                 </div>
             </div>
         
@@ -46,47 +55,57 @@ const Topbar = () => {
         
             <List>
                 {SidemenuLinks.map((link) => (
-                <ListItem key={link.id}  disablePadding>
-                    <Link to={`${link.location}`} className='link-gray'>
-                    <ListItemButton >
-                        <ListItemIcon>
-                        {link.icon}
-                        </ListItemIcon>
-                        <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
-                    </ListItemButton>
-                    </Link>
-                </ListItem>
+                    <ListItem key={link.id} disablePadding>
+                        <Link to={`${link.location}`} className='link-gray'>
+                            <ListItemButton  sx={{width: 240}} >
+                                <ListItemIcon>
+                                {link.icon}
+                                </ListItemIcon>
+                                <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
+                            </ListItemButton>
+                        </Link>
+                    </ListItem>
                 ))}
             </List>
             <Divider />
             <List>
                 {TopbarMenuLink.map((link) => (
-                <ListItem key={link.id}  disablePadding>
-                    <Link to={`${link.location}`} className='link-gray'>
-                    <ListItemButton >
-                        <ListItemIcon>
-                        {link.icon}
-                        </ListItemIcon>
-                        <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
-                    </ListItemButton>
-                    </Link>
-                </ListItem>
+                    <ListItem key={link.id}  disablePadding>
+                        <Link to={`${link.location}`} className='link-gray'>
+                            <ListItemButton sx={{width: 240}} >
+                                <ListItemIcon>
+                                {link.icon}
+                                </ListItemIcon>
+                                <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
+                            </ListItemButton>
+                        </Link>
+                    </ListItem>
                 ))}
             </List>
             <Divider />
             <List>
                 {SidemenuLinksBottom.map((link) => (
-                <ListItem key={link.id} disablePadding>
-                    <Link to={`${link.location}`} className='link-gray'>
-                    <ListItemButton >
-                        <ListItemIcon>
-                        {link.icon}
-                        </ListItemIcon>
-                        <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
-                    </ListItemButton>
-                    </Link>
-                </ListItem>
+                    <ListItem key={link.id} disablePadding>
+                        <Link to={`${link.location}`} className='link-gray'>
+                            <ListItemButton sx={{width: 240}} >
+                                <ListItemIcon>
+                                    {link.icon}
+                                </ListItemIcon>
+                                <ListItemText sx={{fontSize: 14,}}>{link.text}</ListItemText>
+                            </ListItemButton>
+                        </Link>
+                    </ListItem>
                 ))}
+            </List>
+            <Divider />
+            <List>
+                <ListItem disabledPadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <button className='logoutButton' onClick={handleLogout} >LOGOUT</button>
+                        </ListItemIcon>
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
     );
@@ -133,19 +152,17 @@ const Topbar = () => {
                 </div>
 
                 <div className="navbarRight">
-
-                    {/* for large screens */}
                     <div className="navbarRight-Components">
                         <div className="navbarRight_flag">
                             <img src='/assets/Tanzania.png' alt='TZ' />
                         </div>
                         <div className="navbarRight_component navbarRight-first">
-                            <Link to='/login' className='link-main Login_text'>
-                                <p>Login or </p>                    
-                            </Link>
-                            <Link to='/register' className='link-main Register_text'>
-                                <p>REGISTER </p>                    
-                            </Link>
+                            <div className='Login_text'>
+                                <p onMouseEnter={handleClick}>Login or </p>                    
+                            </div>
+                            <div className='Register_text'>
+                                <p onMouseEnter={handleClick}>REGISTER </p>                    
+                            </div>
 
                             <div className="registerIcon">
                                 <Person sx={{fontSize: 30}} onClick={handleClick} />
@@ -153,26 +170,18 @@ const Topbar = () => {
                             <Menu
                                 id="long-menu"
                                 MenuListProps={{
-                                'aria-labelledby': 'long-button',
+                                    'aria-labelledby': 'long-button',
                                 }}
                                 anchorEl={anchorEl}
                                 open={open}
                                 onClose={handleClose}
                                 PaperProps={{
-                                style: {
-                                    maxHeight: ITEM_HEIGHT * 4.5,
-                                    width: '17ch',
-                                },
+                                    style: {
+                                        maxHeight: ITEM_HEIGHT * 4.5,
+                                        width: '17ch',
+                                    },
                                 }}
-                                > 
-                                <Link to="/profile" className='link-main'>
-                                    <MenuItem  onClick={handleClose}>
-                                        <div className="menuIconItem">
-                                            <Person2 sx={{fontSize: 22,}} /> Profile
-                                        </div>
-                                    </MenuItem>
-                                </Link>      
-                                            
+                                >          
                                 <Link to="/register" className='link-main'>
                                     <MenuItem  onClick={handleClose}>
                                         <div className="menuIconItem">
@@ -197,7 +206,7 @@ const Topbar = () => {
                                     <ShoppingCart sx={{fontSize: 34}} />
                                     <div className="cart_items">
                                         <div className="cart-itemNo">
-                                            <p>3</p>
+                                            <p>{quantity.length}</p>
                                         </div>
                                         <p>Item(s)</p>
                                     </div>
@@ -208,7 +217,7 @@ const Topbar = () => {
                                 <div className="navbarCart_Icon">
                                     <ShoppingCart sx={{fontSize: 30}} />
                                     <div className="navbarCart_IconItems">
-                                        <p>6</p>
+                                        <p>{quantity.length}</p>
                                     </div>
                                 </div>
                             </Link>
@@ -219,17 +228,17 @@ const Topbar = () => {
             
             <div className="navigation_links">
                 <div className="navigation_links_item">
-                    <Link to='/products' className='link-main'>
+                    <Link to='/products' className='link-main navigation_links-p'>
                         <p>Products</p>
                     </Link>
                 </div>
                 <div className="navigation_links_item">
-                    <Link to='/services-and-installations' className='link-main'>
+                    <Link to='/services-and-installations' className='link-main navigation_links-p'>
                         <p>Services & Installations </p>
                     </Link>
                 </div>
                 <div className="navigation_links_item">
-                    <Link to='/recycling' className='link-main'>
+                    <Link to='/recycling' className='link-main navigation_links-p'>
                         <p>Recycling</p>
                     </Link>
                 </div>

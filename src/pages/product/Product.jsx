@@ -1,18 +1,81 @@
-import { AdditionalResources, ProductAttributes } from '../../dummyData'
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AdditionalResources } from '../../dummyData'
 import './product.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { addProducts } from '../../redux/cartRedux';
+import { addFavourite } from '../../redux/wishlistRedux';
+import moment from 'moment';
 
 const Product = () => {
+    const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const productId = location.pathname.split("/")[2];
+    const user = useSelector((state) => state.client.currentUser);
+    const product = useSelector((state) => state.clientProducts.products.find((product) => product._id === productId));
+
+    const handleCart = () => {
+        user 
+        ?
+            dispatch(addProducts({...product, quantity}))
+        :
+            navigate('/login');
+    }
+
+    const handleWishlist = () => {
+        user 
+        ?
+            dispatch(addFavourite({...product, quantity}))
+        :
+            navigate('/login');
+    }
+
+    const productAttribute = [
+        {
+            id: 1,
+            item: "Category",
+            description: `${product.type}`
+        },
+        {
+            id: 2,
+            item: "Manufacturer",
+            description: `${product.brand} company`
+        },
+        {
+            id: 3,
+            item: "Series",
+            description: `-`
+        },
+        {
+            id: 4,
+            item: "Packaging",
+            description: `Bulk`
+        },
+        {
+            id:5,
+            item: "Part",
+            description: "Active",
+        },
+        {
+            id:6,
+            item: "Rating",
+            description: `${product.rating || 4.5}`,
+        },
+    ]
+
   return (
     <div className="product-container">
         <div className="product-wrapper">
             <div className="product-left">
                 <div className="product-information">
                     <div className="product-name">
-                        <h2>AESEB1S</h2>
+                        <h2>{product.title}</h2>
                     </div>
                     <div className="productInfo-container">
                         <div className="productInfo-left">
-                            <img src='/assets/cb.jpg' alt='CB' />
+                            <img src={product.img} alt='CB' />
                         </div>
 
                         <div className="productInfo-right">
@@ -21,7 +84,7 @@ const Product = () => {
                                     <p>Zeal Part Number</p>
                                 </div>
                                 <div className="productInfo-item-left">
-                                    <p>1742-AESEB</p>
+                                    <p>{product._id}</p>
                                 </div>
                             </div>
                             <div className="productInfo-details">
@@ -29,23 +92,23 @@ const Product = () => {
                                     <p>Manufactures</p>
                                 </div>
                                 <div className="productInfo-item-left">
-                                    <p className='link-blue'>Klein Tools, Inc</p>
+                                    <p className='link-blue'>{product.brand}</p>
                                 </div>
                             </div>
                             <div className="productInfo-details">
                                 <div className="productInfo-item">
-                                    <p>Manufactures Product No:</p>
+                                    <p>Product price</p>
                                 </div>
                                 <div className="productInfo-item-left">
-                                    <p>124556</p>
+                                    <p>Tsh, {product.price}</p>
                                 </div>
                             </div>
                             <div className="productInfo-details">
                                 <div className="productInfo-item">
-                                    <p>Standard Lead Time</p>
+                                    <p>Published</p>
                                 </div>
                                 <div className="productInfo-item-left">
-                                    <p>2 weeks</p>
+                                    <p>{moment(product.createdAt).fromNow()}</p>
                                 </div>
                             </div>
                             <div className="productInfo-details">
@@ -68,6 +131,13 @@ const Product = () => {
                     </div>
                 </div>
 
+                <div className="product-attributes">
+                    <h3>Product description</h3>
+                    <div className="productDesc">
+                        <p>{product.desc}</p>
+                    </div>
+                </div>
+
                 <div className="product-small-screen">
                     <div className="product-cart">
                         <div className="productCart-top">
@@ -77,7 +147,7 @@ const Product = () => {
                         </div>
                         <div className="productCart-quantity">
                             <p>QUANTITY</p>
-                            <input type="number" defaultValue={"1"} />
+                            <input type="number" defaultValue={"1"} onChange={(e) => setQuantity(e.target.value)} />
 
                             <div className="productCart-table">
                                 <table>
@@ -104,8 +174,8 @@ const Product = () => {
                             </div>
                         </div>
                         <div className="productCart-buttons">
-                            <button>Add to List</button>
-                            <button>Add to Cart</button>
+                            <button onClick={() => handleWishlist()}>Add to List</button>
+                            <button onClick={() => handleCart()}>Add to Cart</button>
                         </div>
                         <div className="productCart-packaging">
                             <div className="productPackaging-header">
@@ -154,10 +224,10 @@ const Product = () => {
                                 <input type="checkbox" />
                             </div>
                         </div>
-                        {ProductAttributes.map((attribute) => (
+                        {productAttribute.map((attribute) => (
                             <div className="productAttribute-item" key={attribute.id}>
                                 <div className="productAttribute-item-1">
-                                    <p>{attribute.type}</p>
+                                    <p>{attribute.item}</p>
                                 </div>
 
                                 <div className="productAttribute-item-2">
@@ -208,7 +278,7 @@ const Product = () => {
                     </div>
                     <div className="productCart-quantity">
                         <p>QUANTITY</p>
-                        <input type="number" defaultValue={"1"} />
+                        <input type="number" defaultValue={"1"} onChange={(e) => setQuantity(e.target.value)} />
 
                         <div className="productCart-table">
                             <table>
@@ -231,12 +301,12 @@ const Product = () => {
                             </table>
                         </div>
                         <div className="productCart-total">
-                            <h3>$467.64</h3>
+                            <h3>Tsh. {product.price}</h3>
                         </div>
                     </div>
                     <div className="productCart-buttons">
-                        <button>Add to List</button>
-                        <button>Add to Cart</button>
+                        <button onClick={() => handleWishlist()}>Add to List</button>
+                        <button onClick={() => handleCart()}>Add to Cart</button>
                     </div>
                     <div className="productCart-packaging">
                         <div className="productPackaging-header">

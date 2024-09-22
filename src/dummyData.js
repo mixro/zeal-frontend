@@ -1,4 +1,4 @@
-import { Category, ElectricalServices, Favorite, Home, HowToReg, Login, Recycling, ShoppingCart } from "@mui/icons-material";
+import { Category, ElectricalServices, Favorite, Home, HowToReg, LocalMall, Login, Recycling, ShoppingCart } from "@mui/icons-material";
 
 export const NavigationLinks = [
     {
@@ -107,7 +107,7 @@ export const SidemenuLinks = [
     },
 
     {
-        id:3,
+        id:4,
         icon:<Recycling />,
         text:"Recycling",
         location:"/recycling",
@@ -117,15 +117,21 @@ export const SidemenuLinks = [
 export const TopbarMenuLink = [
     {
         id: 1,
+        icon: <ShoppingCart />,
+        text: "Cart",
+        location: "/cart"
+    },
+    {
+        id: 2,
         icon: <Favorite />,
         text: "Wishlist",
         location: "/wishlist"
     },
     {
-        id: 2,
-        icon: <ShoppingCart />,
-        text: "Cart",
-        location: "/cart"
+        id: 3,
+        icon: <LocalMall />,
+        text: "Orders",
+        location: "/orders"
     }
 ]
 
@@ -231,4 +237,52 @@ export const RecyclingStats = [
         header: "Pallet",
         number: 3.3,
     },
+]
+
+export const OrdersList = [
+    {
+        userId: "66def0a00bec1fe4c43cae22",
+        products: [
+            {
+                "productId": "66dee3b963dd5c311fa80cf8",
+                "title": "SIEMENS SIMATIC S7 1500",
+                "desc": "We take pride in offering a wide range of high quality electrical equipment designed to meet the diverse need of our customer. Our products are sourced from reputable manufactures and rigorously tested to ensure reliability, efficiency and safety",
+                "img": "https://www.dmcinfo.com/portals/0/2017_Images/Siemens-S7-1500-PLC.jpg",
+                "categories": [
+                    "automation",
+                    "Power systems"
+                ],
+                "price": 100000,
+                "type": "Automation equipment",
+                "brand": "Siemens",
+                "rating": 4.5,
+                "status": true,
+                "inStock": true,
+                "quantity": 2
+            },
+            {
+                "productId": "66dee59a63dd5c311fa80cfe",
+                "title": "SIEMENS SIMATIC S7 1200",
+                "desc": "We take pride in offering a wide range of high quality electrical equipment designed to meet the diverse need of our customer. Our products are sourced from reputable manufactures and rigorously tested to ensure reliability, efficiency and safety",
+                "img": "https://www.dmcinfo.com/portals/0/2017_Images/Siemens-S7-1500-PLC.jpg",
+                "categories": [
+                    "automation",
+                    "Power systems"
+                ],
+                "price": 100000,
+                "type": "Automation equipment",
+                "brand": "Siemens",
+                "rating": 4.5,
+                "status": true,
+                "inStock": true,
+                "quantity": 4
+            }
+        ],
+        amount: 2566,
+        address: "Dar es Salaam, Tanzania",
+        phoneNumber:"+2557898909545",
+        name:"Amina",
+        email:"amina@gmail.com",
+        status: "pending"
+    }
 ]

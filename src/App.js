@@ -6,11 +6,13 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Products from './pages/products/Products';
 import Product from './pages/product/Product';
-import Installations from './pages/installations/Installations';
-import Installation from './pages/installation/Installation';
 import Recycling from './pages/recycling/Recycling';
 import Cart from './pages/cart/Cart';
 import Wishlist from './pages/wishlist/Wishlist';
+import Success from './pages/success/Success';
+import Orders from './pages/orders/Orders';
+import Services from './pages/services/Services';
+import Service from './pages/service/Service';
 
 function App() {
   return (
@@ -30,12 +32,14 @@ function App() {
                   <Route index element={<Home />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/wishlist" element={<Wishlist />} />
+                  <Route path="/success" element={<Success />} />
+                  <Route path="/orders" element={<Orders />} />
                   
                   <Route path="/products" element={<Products />} />
                   <Route path="/product/:id" element={<Product />} />
 
-                  <Route path="/services-and-installations" element={<Installations />} />
-                  <Route path="/services-and-installations/:id" element={<Installation />} />
+                  <Route path="/services-and-installations" element={<Services />} />
+                  <Route path="/services-and-installations/:id" element={<Service />} />
 
                   <Route path="/recycling" element={<Recycling />} />
                 </Routes>

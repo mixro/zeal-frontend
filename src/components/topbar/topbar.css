@@ -17,10 +17,15 @@
     /*------------------- NAVBAR LEFT ----------------------*/
 .navbarLeft {
     flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .navbarMenu-Icon {
     cursor: pointer;
+    display: block;
+    color: var(--main-color);
 }
 
 .navbar-logo {
@@ -50,6 +55,21 @@
 .link-gray {
     text-decoration: none;
     color: black;
+}
+
+
+.logoutButton {
+    width: 100%;
+    padding: 8px;
+    width: 200px;
+    background: red;
+    color: var(--main-color);
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
     /*------------------- NAVBAR CENTER ----------------------*/
@@ -186,14 +206,15 @@
 
 .navigation_links_item {
     border-bottom: 1px solid transparent;
+    position: relative;
 }
 
-.navigation_links_item p {
+.navigation_links-p p {
     font-size: 15px;
     position: relative;
 }
 
-.navigation_links_item p::after {
+.navigation_links-p p::after {
     content: "\25BC ";
     position: absolute;
     padding: 5px 5px 0;
@@ -205,10 +226,16 @@
     border-bottom: 1px solid var(--main-color);
 }
 
+.menuIconItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 
 
     /*-------Not seen in large screen------*/
-.registerIcon, .navbarMenu-Icon, .navbarCart_Icon, .navbarRight_flag, .smallSearch-bar {
+.registerIcon, .navbarCart_Icon, .navbarRight_flag, .smallSearch-bar {
     display: none;
 }
 

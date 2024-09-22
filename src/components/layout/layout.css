@@ -8,12 +8,13 @@
     --black-color: #161616;
     --blue-color: #0000ff;
     --green-color: #008000;
+    --gray-color: gray;
     --button-color: #268bf6;
 
     --swiper-background: #e8e8e7ee;
     --swiper-red: #ff2100;
     --swiper-blue: #1F6496;
-    --swiper-green: rgb(2, 175, 2);
+    --swiper-green: #02af02;
 
     --box-shadow: 0.5px 0.5px 5px 0px rgba(0,0,0,0.5);
 }

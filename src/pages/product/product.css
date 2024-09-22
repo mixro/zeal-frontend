@@ -71,6 +71,16 @@
     flex-basis: 48%;
 }
 
+    /*------------- product description -----------------*/
+.productDesc {
+    border-radius: 5px;
+    background: white;
+    padding: 20px 15px;
+
+    box-shadow: var(--box-shadow);
+}
+
+
     /*------------- product attributes -----------------*/
 .product-attributes {
     padding-top: 4%;
@@ -86,9 +96,7 @@
     border-radius: 5px;
     background: white;
 
-    -webkit-box-shadow: 0.5px 0.5px 5px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0.5px 0.5px 5px 0px rgba(0,0,0,0.5);
-    box-shadow: 0.5px 0.5px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: var(--box-shadow);
 }
  
 .productAttribute-item {

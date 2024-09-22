@@ -70,6 +70,11 @@
     outline: none;
 }
 
+.error {
+    color: red;
+    font-size: 14px;
+}
+
 .registerButton {
     width: 100%;
     padding: 10px 0;

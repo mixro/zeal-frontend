@@ -1,7 +1,23 @@
-import { Link } from 'react-router-dom'
 import './login.css'
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { SignIn } from '../../redux/apiCalls';
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [logginButtonClicked, setLogginButtonClicked] = useState(false);
+  const navigate = useNavigate();
+  const { isFetching, error } = useSelector((state) => state.client);
+  const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setLogginButtonClicked(true); // Set the state to true when the button is clicked
+    SignIn(dispatch, { email, password }, navigate);
+}
+
   return (
     <div className="registerContainer">
       <div className="registerTop">
@@ -22,6 +38,7 @@ const Login = () => {
                 type="text"
                 className='register-input' 
                 placeholder='eg; johndoe@gmail.com'
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="registerBody_item">
@@ -30,11 +47,17 @@ const Login = () => {
                 type="password"
                 className='register-input' 
                 placeholder='Enter password'
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
           <div className="registerButton loginButton">
-            <button>LOGIN</button>
+            <button onClick={handleClick}>{logginButtonClicked ? (isFetching && logginButtonClicked ? "Loading.." : "LOGIN") : "LOGIN"}</button>
+            {logginButtonClicked && error && // Display error only after button click
+              <div className="error">
+                <p>Wrong credentials!!, Try again !!</p>
+              </div>
+            }
           </div>
 
           <div className="registerNow">
