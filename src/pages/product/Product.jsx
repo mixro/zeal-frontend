@@ -130,14 +130,7 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className="product-attributes">
-                    <h3>Product description</h3>
-                    <div className="productDesc">
-                        <p>{product.desc}</p>
-                    </div>
-                </div>
-
+                
                 <div className="product-small-screen">
                     <div className="product-cart">
                         <div className="productCart-top">
@@ -204,6 +197,13 @@ const Product = () => {
                             </table>
                             <p style={{fontWeight: "bold"}}>Manufactures Standard Package</p>
                         </div>
+                    </div>
+                </div>
+
+                <div className="product-attributes">
+                    <h3>Product description</h3>
+                    <div className="productDesc">
+                        <p>{product.desc}</p>
                     </div>
                 </div>
 
