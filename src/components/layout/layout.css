@@ -1,6 +1,6 @@
 :root {
     --main-color: #F4F5FA;
-    --whiter-color: rgb(251, 251, 251);
+    --whiter-color: #fbfbfb;
     --primary-color: #1D2756;
     --secondary-color: #CFAE30;
     --red-color: #ff0000;
@@ -21,8 +21,19 @@
 
 
 
+.layout-component {
+    width: 100vw;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--whiter-color);
+}
+
 .layoutContainer {
     width: 100vw;
+    max-width: 1440px;
     overflow-x: hidden;
     background: var(--main-color);
 }

@@ -4,17 +4,19 @@ import './layout.css';
 
 const Layout = ({children}) => {
   return (
-    <div className="layoutContainer">
-        <div className="topbar">
-            <Topbar />
-        </div>
+    <div className="layout-component">
+        <div className="layoutContainer">
+            <div className="topbar">
+                <Topbar />
+            </div>
 
-        <div className="main-body">
-            {children}
-        </div>
-        
-        <div className="footer">
-            <Footer />
+            <div className="main-body">
+                {children}
+            </div>
+            
+            <div className="footer">
+                <Footer />
+            </div>
         </div>
     </div>
   )
