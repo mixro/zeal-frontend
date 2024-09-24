@@ -155,15 +155,15 @@ const Product = () => {
                                     <tbody>
                                         <tr>
                                             <td>Bulk</td>
-                                            <td>3</td>
-                                            <td>$155.88</td>
-                                            <td>$467.64</td>
+                                            <td>1</td>
+                                            <td>Tsh, {product.price}</td>
+                                            <td>Tsh, {product.price}</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div className="productCart-total">
-                                <h3>$467.64</h3>
+                                <h3>Tsh, {product.title}</h3>
                             </div>
                         </div>
                         <div className="productCart-buttons">
@@ -185,13 +185,13 @@ const Product = () => {
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>$155.88000</td>
-                                        <td>$155.88</td>
+                                        <td>Tsh, {product.price}</td>
+                                        <td>Tsh, {product.price}</td>
                                     </tr>
                                     <tr>
                                         <td>10</td>
-                                        <td>$149.99100</td>
-                                        <td>$1,499.91</td>
+                                        <td>Tsh, {product.price * 10}</td>
+                                        <td>Tsh, {product.price * 10}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -293,9 +293,9 @@ const Product = () => {
                                 <tbody>
                                     <tr>
                                         <td>Bulk</td>
-                                        <td>3</td>
-                                        <td>$155.88</td>
-                                        <td>$467.64</td>
+                                        <td>1</td>
+                                        <td>Tsh, {product.price}</td>
+                                        <td>Tsh, {product.price}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -323,13 +323,13 @@ const Product = () => {
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>$155.88000</td>
-                                    <td>$155.88</td>
+                                    <td>Tsh, {product.price}</td>
+                                    <td>Tsh, {product.price}</td>
                                 </tr>
                                 <tr>
                                     <td>10</td>
-                                    <td>$149.99100</td>
-                                    <td>$1,499.91</td>
+                                    <td>Tsh, {product.price * 10}</td>
+                                    <td>Tsh, {product.price * 10}</td>
                                 </tr>
                             </tbody>
                         </table>
