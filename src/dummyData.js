@@ -18,7 +18,7 @@ export const NavigationLinks = [
     },
     {
         id: 4,
-        name: "Connectores",
+        name: "Connectors",
         path: "/automation",
     },
     {
@@ -28,7 +28,7 @@ export const NavigationLinks = [
     },
     {
         id: 6,
-        name: "Hardware and fasters",
+        name: "Hardware",
         path: "/automation",
     },
     {

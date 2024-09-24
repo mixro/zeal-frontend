@@ -131,7 +131,7 @@ const Topbar = () => {
                     </div>
                     <div className="navbar-logo">
                         <Link to='/' className='link-main'>
-                            <img src='/assets/zeal-logo.png' alt="ZEAL" className='company-logo' />
+                            <img src='/assets/zeal-logo-5.png' alt="ZEAL" className='company-logo' />
                         </Link>
                     </div>
                 </div>

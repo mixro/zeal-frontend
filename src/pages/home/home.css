@@ -65,10 +65,26 @@
     position: relative;
 }
 
-.homeSwiper-container img {
+.swiper-background {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.homeSwiper-zeal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--zeal-background);
+}
+
+.homeSwiper-zeal img {
+    width: 60%;
 }
 
 .homeSwiper-image-desc {
@@ -260,6 +276,10 @@
 @media screen and (max-width: 730px) {
     .home_container {
         padding-top: 8%;
+    }
+
+    .homeSwiper-zeal img {
+        width: 80%;
     }
 
     .homeLeft-Items {

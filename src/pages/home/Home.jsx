@@ -66,7 +66,16 @@ const Home = () => {
             >
               <SwiperSlide>
                 <div className="homeSwiper-container">
-                  <img src="/assets/shipment.jpg" alt="PCB" />
+                  <img src="/assets/shipment.jpg" className='swiper-background' alt="PCB" />
+
+                  <div className="homeSwiper-zeal">
+                    <img src='/assets/zeal-logo-1.png' alt="ZEAL LOGO" />
+                   </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="homeSwiper-container">
+                  <img src="/assets/shipment.jpg" className='swiper-background' alt="PCB" />
 
                   <div className="homeSwiper-image-desc">
                     <p><span>I</span>mporting and distributing quality electronic equipments to meet your demands!</p>
@@ -78,7 +87,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="homeSwiper-container">
-                  <img src="/assets/electrical.jpg" alt="PCB" />
+                  <img src="/assets/electrical.jpg" className='swiper-background' alt="PCB" />
 
                   <div className="homeSwiper-image-desc swiper-services-desc">
                     <p><span>O</span>ffering full range of electrical services to keep your home and business powered up!</p>
@@ -90,7 +99,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="homeSwiper-container">
-                  <img src="/assets/machines.jpg" alt="PCB" />
+                  <img src="/assets/machines.jpg" className='swiper-background' alt="PCB" />
 
                   <div className="homeSwiper-image-desc swiper-recycling-desc">
                     <p><span>C</span>ommitted to sustainable recycling solutions that reduce waste and protect our planet!</p>
