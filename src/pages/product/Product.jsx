@@ -163,7 +163,7 @@ const Product = () => {
                                 </table>
                             </div>
                             <div className="productCart-total">
-                                <h3>Tsh, {product.title}</h3>
+                                <h3>Tsh, {product.price}</h3>
                             </div>
                         </div>
                         <div className="productCart-buttons">
