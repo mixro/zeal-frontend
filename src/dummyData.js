@@ -286,3 +286,45 @@ export const OrdersList = [
         status: "pending"
     }
 ]
+
+export const dummyCategories = [
+    {
+        id: 1,
+        name: "Automation equipment"
+    },
+    {
+        id: 2,
+        name: "Power protection"
+    },
+    {
+        id: 3,
+        name: "Power control"
+    },
+    {
+        id: 4,
+        name: "Solar system"
+    },
+]
+
+export const dummyBrands = [
+    {
+        id: 1,
+        name: "Siemens"
+    },
+    {
+        id: 2,
+        name: "Schneider"
+    },
+    {
+        id: 3,
+        name: "ABB"
+    },
+    {
+        id: 4,
+        name: "Omron"
+    },
+    {
+        id: 5,
+        name: "Huawei"
+    },
+]

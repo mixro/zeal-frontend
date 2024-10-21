@@ -45,7 +45,7 @@ const Details = () => {
                 >
                     <SwiperSlide>
                         <div className="slider-container">
-                            <Link to='/product/8iureajkdhdjfdfa' className='link-main'>
+                            <Link to='/productsa' className='link-main'>
                                 <div className="slider-name">
                                     <p>SIEMENS-S7-1500</p>
                                     <p>SIEMENS</p>
@@ -60,104 +60,118 @@ const Details = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="slider-container">
-                            <div className="slider-name">
-                                <p>NXP IoT Microntroller</p>
-                                <p>NXP</p>
-                            </div>
-                            <div className="slider-image">
-                                <img src='/assets/nxp-chip.png' alt='CB' />
-                            </div>
-                            <div className="slider-product-desc">
-                                <p>The MCX portfolio is a comprehensive selection of Arm® Cortex®-M based MCUs, offering expanded scalability with breakthrough product capabilities, simplified system design and a developer-focused experience through our MCUXpresso suite of software and tools.</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slider-container">
-                            <div className="slider-name">
-                                <p>PREDATOR Inverter Generator</p>
-                                <p>Harbor Freight Tools</p>
-                            </div>
-                            <div className="slider-image">
-                                <img src='/assets/predator.png' alt='CB' />
-                            </div>
-                            <div className="slider-product-desc">
-                                <p>The PREDATOR® 5000 Watt Inverter Generator has dual-fuel capability to run on gasoline or propane. This generator is ideal for RVs, home backup, and more</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slider-container">
-                            <div className="slider-name">
-                                <p>TeSys IEC Contactor</p>
-                                <p>Schneider Electric</p>
-                            </div>
-                            <div className="slider-image">
-                                <img src='/assets/contactor.png' alt='CB' />
-                            </div>
-                            <div className="slider-product-desc">
-                                <p>The Schneider Electric TeSys IEC Contactor is a high-performance, reliable contactor designed for control and protection of electrical motors and other loads in industrial and commercial applications. </p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slider-container">
-                            <Link to='/product/8iureajkdhdjfdfa' className='link-main'>
+                        <Link to='/productsa' className='link-main'>
+                            <div className="slider-container">
                                 <div className="slider-name">
-                                    <p>SIEMENS-S7-1500</p>
-                                    <p>SIEMENS</p>
+                                    <p>NXP IoT Microntroller</p>
+                                    <p>NXP</p>
                                 </div>
                                 <div className="slider-image">
-                                    <img src='/assets/siemens-plc.png' alt='CB' />
+                                    <img src='/assets/nxp-chip.png' alt='CB' />
                                 </div>
                                 <div className="slider-product-desc">
-                                    <p>It delivers high-speed processing with up to 1 ns per instruction and supports seamless connectivity through PROFINET and PROFIBUS protocols. Its modular design allows for flexible expansion, while integrated safety, security, and motion control ensure robust and versatile automation solutions</p>
+                                    <p>The MCX portfolio is a comprehensive selection of Arm® Cortex®-M based MCUs, offering expanded scalability with breakthrough product capabilities, simplified system design and a developer-focused experience through our MCUXpresso suite of software and tools.</p>
                                 </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="slider-container">
-                            <div className="slider-name">
-                                <p>NXP IoT Microntroller</p>
-                                <p>NXP</p>
+                        <Link to='/productsa' className='link-main'>
+                            <div className="slider-container">
+                                <div className="slider-name">
+                                    <p>PREDATOR Inverter Generator</p>
+                                    <p>Harbor Freight Tools</p>
+                                </div>
+                                <div className="slider-image">
+                                    <img src='/assets/predator.png' alt='CB' />
+                                </div>
+                                <div className="slider-product-desc">
+                                    <p>The PREDATOR® 5000 Watt Inverter Generator has dual-fuel capability to run on gasoline or propane. This generator is ideal for RVs, home backup, and more</p>
+                                </div>
                             </div>
-                            <div className="slider-image">
-                                <img src='/assets/nxp-chip.png' alt='CB' />
-                            </div>
-                            <div className="slider-product-desc">
-                                <p>The MCX portfolio is a comprehensive selection of Arm® Cortex®-M based MCUs, offering expanded scalability with breakthrough product capabilities, simplified system design and a developer-focused experience through our MCUXpresso suite of software and tools.</p>
-                            </div>
-                        </div>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="slider-container">
-                            <div className="slider-name">
-                                <p>PREDATOR Inverter Generator</p>
-                                <p>Harbor Freight Tools</p>
+                        <Link to='/productsa' className='link-main'>
+                            <div className="slider-container">
+                                <div className="slider-name">
+                                    <p>TeSys IEC Contactor</p>
+                                    <p>Schneider Electric</p>
+                                </div>
+                                <div className="slider-image">
+                                    <img src='/assets/contactor.png' alt='CB' />
+                                </div>
+                                <div className="slider-product-desc">
+                                    <p>The Schneider Electric TeSys IEC Contactor is a high-performance, reliable contactor designed for control and protection of electrical motors and other loads in industrial and commercial applications. </p>
+                                </div>
                             </div>
-                            <div className="slider-image">
-                                <img src='/assets/predator.png' alt='CB' />
-                            </div>
-                            <div className="slider-product-desc">
-                                <p>The PREDATOR® 5000 Watt Inverter Generator has dual-fuel capability to run on gasoline or propane. This generator is ideal for RVs, home backup, and more</p>
-                            </div>
-                        </div>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="slider-container">
-                            <div className="slider-name">
-                                <p>TeSys IEC Contactor</p>
-                                <p>Schneider Electric</p>
+                        <Link to='/productsa' className='link-main'>
+                            <div className="slider-container">
+                                <Link to='/product/8iureajkdhdjfdfa' className='link-main'>
+                                    <div className="slider-name">
+                                        <p>SIEMENS-S7-1500</p>
+                                        <p>SIEMENS</p>
+                                    </div>
+                                    <div className="slider-image">
+                                        <img src='/assets/siemens-plc.png' alt='CB' />
+                                    </div>
+                                    <div className="slider-product-desc">
+                                        <p>It delivers high-speed processing with up to 1 ns per instruction and supports seamless connectivity through PROFINET and PROFIBUS protocols. Its modular design allows for flexible expansion, while integrated safety, security, and motion control ensure robust and versatile automation solutions</p>
+                                    </div>
+                                </Link>
                             </div>
-                            <div className="slider-image">
-                                <img src='/assets/contactor.png' alt='CB' />
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to='/productsa' className='link-main'>
+                            <div className="slider-container">
+                                <div className="slider-name">
+                                    <p>NXP IoT Microntroller</p>
+                                    <p>NXP</p>
+                                </div>
+                                <div className="slider-image">
+                                    <img src='/assets/nxp-chip.png' alt='CB' />
+                                </div>
+                                <div className="slider-product-desc">
+                                    <p>The MCX portfolio is a comprehensive selection of Arm® Cortex®-M based MCUs, offering expanded scalability with breakthrough product capabilities, simplified system design and a developer-focused experience through our MCUXpresso suite of software and tools.</p>
+                                </div>
                             </div>
-                            <div className="slider-product-desc">
-                                <p>The Schneider Electric TeSys IEC Contactor is a high-performance, reliable contactor designed for control and protection of electrical motors and other loads in industrial and commercial applications. </p>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to='/productsa' className='link-main'>
+                            <div className="slider-container">
+                                <div className="slider-name">
+                                    <p>PREDATOR Inverter Generator</p>
+                                    <p>Harbor Freight Tools</p>
+                                </div>
+                                <div className="slider-image">
+                                    <img src='/assets/predator.png' alt='CB' />
+                                </div>
+                                <div className="slider-product-desc">
+                                    <p>The PREDATOR® 5000 Watt Inverter Generator has dual-fuel capability to run on gasoline or propane. This generator is ideal for RVs, home backup, and more</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to='/productsa' className='link-main'>
+                            <div className="slider-container">
+                                <div className="slider-name">
+                                    <p>TeSys IEC Contactor</p>
+                                    <p>Schneider Electric</p>
+                                </div>
+                                <div className="slider-image">
+                                    <img src='/assets/contactor.png' alt='CB' />
+                                </div>
+                                <div className="slider-product-desc">
+                                    <p>The Schneider Electric TeSys IEC Contactor is a high-performance, reliable contactor designed for control and protection of electrical motors and other loads in industrial and commercial applications. </p>
+                                </div>
+                            </div>
+                        </Link>
                     </SwiperSlide>
                 </Swiper>
             </div>

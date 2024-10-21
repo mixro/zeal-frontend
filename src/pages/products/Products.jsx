@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import moment from 'moment'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
+import { dummyBrands, dummyCategories } from '../../dummyData'
 
 const Products = () => {
     const dispatch = useDispatch();
@@ -83,28 +84,52 @@ const Products = () => {
                     
                     <div className="products-filters products-categories">
                         <h2>Categories</h2>
-                        {uniqueCategories.map((category) => (
-                            <div className="products-category-item" key={category}>
-                                <p>{category}</p>
-                                <input 
-                                    type="checkbox" 
-                                    onChange={() => handleCategoryChange(category)}
-                                />
-                            </div>
-                        ))}
+                        {uniqueCategories.length > 0 
+                            ? 
+                            uniqueCategories.map((category) => (
+                                <div className="products-category-item" key={category}>
+                                    <p>{category}</p>
+                                    <input 
+                                        type="checkbox" 
+                                        onChange={() => handleCategoryChange(category)}
+                                    />
+                                </div>
+                            ))
+                            :
+                            dummyCategories.map((category) => (
+                                <div className="products-category-item" key={category.id}>
+                                    <p>{category.name}</p>
+                                    <input 
+                                        type="checkbox" 
+                                    />
+                                </div>
+                            ))
+                        }
                     </div>
 
                     <div className="products-filters products-categories">
                         <h2>Brands</h2>
-                        {uniqueBrands.map((brand) => (
-                            <div className="products-category-item" key={brand}>
-                                <p>{brand}</p>
-                                <input 
-                                    type="checkbox" 
-                                    onChange={() => handleBrandChange(brand)} 
-                                />
-                            </div>
-                        ))}
+                        {uniqueBrands.length > 0
+                            ?
+                            uniqueBrands.map((brand) => (
+                                <div className="products-category-item" key={brand}>
+                                    <p>{brand}</p>
+                                    <input 
+                                        type="checkbox" 
+                                        onChange={() => handleBrandChange(brand)} 
+                                    />
+                                </div>
+                            ))
+                            :
+                            dummyBrands.map((brand) => (
+                                <div className="products-category-item" key={brand.id}>
+                                    <p>{brand.name}</p>
+                                    <input 
+                                        type="checkbox" 
+                                    />
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

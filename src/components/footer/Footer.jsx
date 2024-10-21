@@ -39,7 +39,9 @@ const Footer = () => {
             <div className="footerTop_Links">
               <div className="footerLinks-icon">
                 <Phone />
-                <p>+255692897243</p>
+                <a href='tel: +255692897243' className='link-main'>
+                  <p>+255692897243</p>
+                </a>
               </div>
               <div className="footerLinks-icon">
                 <WhatsApp />
@@ -47,7 +49,9 @@ const Footer = () => {
               </div>
               <div className="footerLinks-icon">
                 <Email />
-                <p>zeal@zeal.co.tz</p>
+                <a href='mailto:zeal@zeal.co.tz' className='link-main'>
+                  <p>zeal@zeal.co.tz</p>  
+                </a>
               </div>
             </div>
           </div>

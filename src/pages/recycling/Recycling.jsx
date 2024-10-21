@@ -11,7 +11,9 @@ const Recycling = () => {
                     <p>Our commitment to sustainability drives us to use the latest recycling technologies, enabling the effective separation, purification, and repurposing of diverse materials. We optimize every step of the recycling process to contribute to a cleaner, greener future.</p>
                     <p>To dispose of waste, you can either call us or visit a collection point near you.</p>
                     <div className="recycling-buttons">
-                        <button>CALL US</button>
+                        <button>
+                            <a href="tel: +255692897243" className='link-main'>CALL US</a>
+                        </button>
                         <button>VIEW COLLECTION POINTS</button>
                     </div>
                 </div>

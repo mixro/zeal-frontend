@@ -191,7 +191,7 @@
 
 .productBrand {
     color: var(--white-color);
-    background: var(--swiper-blue);
+    background: var(--green-color);
     border: 1px solid var(--swiper-blue);
 }
 
@@ -437,7 +437,7 @@
     }
 
     .productsReaction_buttons button:nth-child(2) {
-        background: green;
+        background: var(--green-color);
     }
 
 
