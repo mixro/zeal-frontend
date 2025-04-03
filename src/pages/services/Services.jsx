@@ -40,7 +40,7 @@ const Services = () => {
     <div className="installation-container">
         <div className="installation-wrapper">
             <div className="installations-top">
-                <h1>SERVICE</h1>
+                <h1>OUR SERVICES</h1>
                 <div className="installation-top-wrapper">
                     <div className="installation-top-left">
                         <h2>Zeal's Electrical Engineering Services & Systems</h2>
@@ -59,7 +59,7 @@ const Services = () => {
                 </div>
 
                 <div className="service-slogan-right">
-                    <p>At Eaton, we stand ready to support America's federal clean energy, stimulus and infrastructure initiatives and build a stronger future for our families and communities. These initiatives will fund major improvements to the nation's aging infrastructure, including grid resiliency, energy efficiency, clean water and safer transportation, while reducing negative impacts on our environment.</p>
+                    <p>At Zeal, we stand ready to support America's federal clean energy, stimulus and infrastructure initiatives and build a stronger future for our families and communities. These initiatives will fund major improvements to the nation's aging infrastructure, including grid resiliency, energy efficiency, clean water and safer transportation, while reducing negative impacts on our environment.</p>
                 </div>
             </div>
 

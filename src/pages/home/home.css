@@ -131,6 +131,14 @@
     background: var(--swiper-red);
     cursor: pointer;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.homeSwiper-image-desc button:hover {
+    gap: 20px;
 }
 
 .swiper-services-desc button {
@@ -256,6 +264,10 @@
         flex-direction: column;
     }
 
+    .homeTop_left {
+        display: none;
+    }
+
     .homeLeft-top p:nth-child(2) {
         display: none;
     }
@@ -272,12 +284,20 @@
     .medium-screen {
         display: block;
     }
+
+    .homeTop_right {
+        aspect-ratio: 1/0.55;
+    }
 }
 
 
 @media screen and (max-width: 730px) {
     .home_container {
         padding-top: 8%;
+    }
+
+    .home_top {
+        border-radius: 8px;
     }
 
     .homeSwiper-zeal img {
@@ -299,14 +319,22 @@
     }
 
     .homeTop_right {
-        aspect-ratio: 1/1.2;
+        aspect-ratio: 1/1.6;
+    }
+
+    .homeSwiper-zeal {
+        background: var(--zeal-background-2);
+        border: 2px solid #1d275674;
+        border-radius: 8px;
     }
 
     .homeSwiper-image-desc {
         top: 20px;
         left: 20px;
         width: 65%;
-        height: 70%;
+        min-height: 55%;
+        height: fit-content;
+        border-radius: 6px;
         padding: 10px 10px 15px;
     }
 
@@ -316,7 +344,8 @@
     }
 
     .homeSwiper-image-desc button {
-        padding: 5px 15px;
+        padding: 5px 8px 5px 15px;
+        margin-top: 50px;
     }
 
     .company-services {

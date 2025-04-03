@@ -13,6 +13,7 @@ const Topbar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const dispatch = useDispatch();
+    const user = useSelector((state) => state.client.currentUser);
     const [state, setState] = useState({ top: false, left: false, bottom: false, right: false,});
 
     const ITEM_HEIGHT = 48;
@@ -97,16 +98,20 @@ const Topbar = () => {
                     </ListItem>
                 ))}
             </List>
-            <Divider />
-            <List>
-                <ListItem disabledPadding>
-                    <ListItemButton>
-                        <ListItemIcon>
-                            <button className='logoutButton' onClick={handleLogout} >LOGOUT</button>
-                        </ListItemIcon>
-                    </ListItemButton>
-                </ListItem>
-            </List>
+            {user && 
+                <>
+                    <Divider />
+                    <List>
+                        <ListItem disabledPadding>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <button className='logoutButton' onClick={handleLogout} >LOGOUT</button>
+                                </ListItemIcon>
+                            </ListItemButton>
+                        </ListItem>
+                    </List>
+                </>
+            }
         </Box>
     );
 
@@ -143,7 +148,9 @@ const Topbar = () => {
                             placeholder='Search here...'
                         />
                         <div className="navbar_SearchIcon">
-                            <Search />
+                            <Link to='/products' className='link-flex'>
+                                <Search />
+                            </Link>
                         </div>
                     </div>
                     <div className="navbarCenter-flag">
@@ -181,7 +188,7 @@ const Topbar = () => {
                                         width: '17ch',
                                     },
                                 }}
-                                >          
+                            >          
                                 <Link to="/register" className='link-main'>
                                     <MenuItem  onClick={handleClose}>
                                         <div className="menuIconItem">
@@ -250,7 +257,9 @@ const Topbar = () => {
                         placeholder='Search here...'
                     />
                     <div className="navbar_SearchIcon">
-                        <Search />
+                        <Link to='/products' className='link-flex'>
+                            <Search />
+                        </Link>
                     </div>
                 </div>
             </div>

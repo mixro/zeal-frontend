@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import './register.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { SignUp } from '../../redux/apiCalls';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -45,7 +46,7 @@ const Register = () => {
       <div className="registerTop">
         <div className="registerTop-image">
           <Link to='/' className='link-main'>
-            <img src="/assets/zeal-logo.png" alt="LOGO" />
+            <img src="/assets/tangtech-logo.png" alt="LOGO" />
           </Link>
         </div>
       </div>
@@ -95,8 +96,10 @@ const Register = () => {
             </div>
           </div>
           <div className="registerButton">
-            <button onClick={handleClick}>{buttonClicked && isFetching ? "Loading.." : "REGISTER"}</button>
-            {buttonClicked && error && 
+            <div onClick={handleClick} className='register-button'>
+              {buttonClicked && isFetching && !error ? <CircularProgress sx={{color: "white"}} size={30} /> : <p>REGISTER</p>}
+            </div>
+            {buttonClicked && error && !isFetching && 
               <div className="error">
                 <p>Error while registering, Try again !!</p>
               </div>
@@ -108,6 +111,13 @@ const Register = () => {
                   <span> Login</span>
                 </Link>
             </p>
+          </div>
+        </div>
+
+        <div className="registerImage">
+          <img src='/assets/shipment.jpg' alt='ZEAL SYSTEMS' />
+          <div className="register-logoImg">
+            <img src="/assets/zeal-logo.png" alt="ZEAL LOGO" />
           </div>
         </div>
       </div>

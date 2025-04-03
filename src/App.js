@@ -13,6 +13,7 @@ import Success from './pages/success/Success';
 import Orders from './pages/orders/Orders';
 import Services from './pages/services/Services';
 import Service from './pages/service/Service';
+import About from './pages/about/About';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                   <Route path="/wishlist" element={<Wishlist />} />
                   <Route path="/success" element={<Success />} />
                   <Route path="/orders" element={<Orders />} />
+                  <Route path="/about-us" element={<About />} />
                   
                   <Route path="/products" element={<Products />} />
                   <Route path="/product/:id" element={<Product />} />

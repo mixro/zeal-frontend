@@ -1,4 +1,4 @@
-import { Category, ElectricalServices, Favorite, Home, HowToReg, LocalMall, Login, Recycling, ShoppingCart } from "@mui/icons-material";
+import { Category, ElectricalServices, Favorite, Home, HowToReg, Info, LocalMall, Login, Recycling, ShoppingCart } from "@mui/icons-material";
 
 export const NavigationLinks = [
     {
@@ -138,12 +138,18 @@ export const TopbarMenuLink = [
 export const SidemenuLinksBottom = [
     {
         id: 1,
+        icon: <Info />,
+        text: "About",
+        location: "/about-us"
+    },
+    {
+        id: 2,
         icon: <HowToReg />,
         text: "Register",
         location: "/register"
     },
     {
-        id: 2,
+        id: 3,
         icon: <Login />,
         text: "Login",
         location: "/login"

@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
+import { ArrowForward } from '@mui/icons-material';
 
 const Details = () => {
   return (
@@ -45,7 +46,7 @@ const Details = () => {
                 >
                     <SwiperSlide>
                         <div className="slider-container">
-                            <Link to='/productsa' className='link-main'>
+                            <Link to='/products' className='link-main'>
                                 <div className="slider-name">
                                     <p>SIEMENS-S7-1500</p>
                                     <p>SIEMENS</p>
@@ -60,7 +61,7 @@ const Details = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link to='/productsa' className='link-main'>
+                        <Link to='/products' className='link-main'>
                             <div className="slider-container">
                                 <div className="slider-name">
                                     <p>NXP IoT Microntroller</p>
@@ -76,7 +77,7 @@ const Details = () => {
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link to='/productsa' className='link-main'>
+                        <Link to='/products' className='link-main'>
                             <div className="slider-container">
                                 <div className="slider-name">
                                     <p>PREDATOR Inverter Generator</p>
@@ -92,7 +93,7 @@ const Details = () => {
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link to='/productsa' className='link-main'>
+                        <Link to='/products' className='link-main'>
                             <div className="slider-container">
                                 <div className="slider-name">
                                     <p>TeSys IEC Contactor</p>
@@ -108,7 +109,7 @@ const Details = () => {
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link to='/productsa' className='link-main'>
+                        <Link to='/products' className='link-main'>
                             <div className="slider-container">
                                 <Link to='/product/8iureajkdhdjfdfa' className='link-main'>
                                     <div className="slider-name">
@@ -126,7 +127,7 @@ const Details = () => {
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link to='/productsa' className='link-main'>
+                        <Link to='/products' className='link-main'>
                             <div className="slider-container">
                                 <div className="slider-name">
                                     <p>NXP IoT Microntroller</p>
@@ -142,7 +143,7 @@ const Details = () => {
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link to='/productsa' className='link-main'>
+                        <Link to='/products' className='link-main'>
                             <div className="slider-container">
                                 <div className="slider-name">
                                     <p>PREDATOR Inverter Generator</p>
@@ -301,7 +302,9 @@ const Details = () => {
                     <p>Our vision is to lead the market in electrical solutions, driven by a commitment to excellence and sustainability. Our mission is to empower our clients by offering cutting-edge products and unmatched service, while fostering a culture of continuous improvement and environmental responsibility</p>
                 </div>
                 <div className="ourBusiness_button">
-                    <button>MORE</button>
+                    <Link to='/about-us' className='link-main'>
+                        <button>MORE <ArrowForward /></button>
+                    </Link>
                 </div>
             </div>
 

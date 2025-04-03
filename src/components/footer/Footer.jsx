@@ -83,7 +83,7 @@ const Footer = () => {
       </div>
 
       <div className="footer_bottom">
-        <p><span>Copyright ©2024</span>, Zeal Energy Systems and Recyclers</p>
+        <p><span>Copyright ©2025</span>, Zeal Energy Systems and Recyclers</p>
         <p>Local Support: Dar es Salaaam, TZ</p>
       </div>
     </div>

@@ -11,15 +11,16 @@
     --gray-color: gray;
     --button-color: #268bf6;
 
+    --primary-variation: #1d2756a5;
     --swiper-background: #e8e8e7ee;
     --zeal-background: #ffffffb9;
+    --zeal-background-2: #ffffff9e;
     --swiper-red: #ff2100;
     --swiper-blue: #1F6496;
     --swiper-green: #02af02;
 
     --box-shadow: 0.5px 0.5px 5px 0px rgba(0,0,0,0.5);
 }
-
 
 
 .layout-component {
@@ -58,6 +59,13 @@
     opacity: 0.8;
     border: 1px solid red;
     border-radius: 50%;
+}
+
+.general-header h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 27px;
+    font-weight: 600;
 }
 
 

@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { ArrowForward } from "@mui/icons-material";
 
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
           
           <div className="homeTop_right">
             <Swiper
-              spaceBetween={30}
+              spaceBetween={0}
               loop={true}
               centeredSlides={true}
               autoplay={{
@@ -68,19 +69,10 @@ const Home = () => {
                 <div className="homeSwiper-container">
                   <img src="/assets/shipment.jpg" className='swiper-background' alt="PCB" />
 
-                  <div className="homeSwiper-zeal">
-                    <img src='/assets/zeal-logo-1.png' alt="ZEAL LOGO" />
-                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="homeSwiper-container">
-                  <img src="/assets/shipment.jpg" className='swiper-background' alt="PCB" />
-
                   <div className="homeSwiper-image-desc">
                     <p><span>I</span>mporting and distributing quality electronic equipments to meet your demands!</p>
-                    <Link to="/products">
-                      <button>Explore products</button>
+                    <Link to="/products" className="link-main">
+                      <button>Explore products  <ArrowForward /></button>
                     </Link>
                   </div>
                 </div>
@@ -91,8 +83,8 @@ const Home = () => {
 
                   <div className="homeSwiper-image-desc swiper-services-desc">
                     <p><span>O</span>ffering full range of electrical services to keep your home and business powered up!</p>
-                    <Link to='/services-and-installations'>
-                      <button>Explore Services</button>
+                    <Link to='/services-and-installations' className="link-main">
+                      <button>Explore Services <ArrowForward /></button>
                     </Link>
                   </div>
                 </div>
@@ -103,10 +95,19 @@ const Home = () => {
 
                   <div className="homeSwiper-image-desc swiper-recycling-desc">
                     <p><span>C</span>ommitted to sustainable recycling solutions that reduce waste and protect our planet!</p>
-                    <Link to='/recycling'>
-                      <button>Explore recycling</button>
+                    <Link to='/recycling' className="link-main">
+                      <button>Explore recycling <ArrowForward /></button>
                     </Link>
                   </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="homeSwiper-container">
+                  <img src="/assets/shipment.jpg" className='swiper-background' alt="PCB" />
+
+                  <div className="homeSwiper-zeal">
+                    <img src='/assets/zeal-logo-1.png' alt="ZEAL LOGO" />
+                   </div>
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -131,7 +132,7 @@ const Home = () => {
               </div>
             </div>
             <div className="service_exploreButton">
-              <Link to="/products">
+              <Link to="/products" className="link-main">
                 <button>Explore</button>
               </Link>
             </div>
@@ -153,7 +154,7 @@ const Home = () => {
               </div>
             </div>
             <div className="service_exploreButton">
-              <Link to="/services-and-installations">
+              <Link to="/services-and-installations" className="link-main">
                 <button>Explore</button>
               </Link>
             </div>
@@ -175,7 +176,7 @@ const Home = () => {
               </div>
             </div>
             <div className="service_exploreButton">
-              <Link to="/recycling">
+              <Link to="/recycling" className="link-main">
                 <button>Explore</button>
               </Link>
             </div>
