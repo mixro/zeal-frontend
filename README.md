@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# Zeal Frontend – Documentation  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-v18-blue) 
+![Redux](https://img.shields.io/badge/Redux-Toolkit-purple) 
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow) 
+![CSS](https://img.shields.io/badge/CSS3-Styling-green)  
 
-## Available Scripts
+The **Zeal Frontend** application is the web interface for **Zeal Energy Systems and Recycles**, a company specializing in importing, exporting, servicing, and installing electrical equipment, as well as providing advanced recycling solutions. This project delivers a modern, responsive, and interactive user experience to showcase services, products, and sustainability initiatives.  
 
-In the project directory, you can run:
 
-### `npm start`
+## Table of Contents  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Overview](#overview)  
+- [Architecture](#architecture)  
+- [Technologies](#technologies)  
+- [Setup Instructions](#setup-instructions)  
+- [Directory Structure](#directory-structure)  
+- [Core Features](#core-features)  
+- [Testing](#testing)  
+- [Deployment](#deployment)  
+- [Future Improvements](#future-improvements)  
+- [Support](#support)  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Overview  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Zeal frontend is designed to:  
 
-### `npm run build`
+- Present **products and services** in an organized, user-friendly manner.  
+- Showcase the company’s **vision, mission, and sustainability initiatives**.  
+- Provide **real-time interaction** with APIs for products and customer engagement.  
+- Ensure accessibility and responsiveness across devices.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application enhances **customer experience, branding, and communication** for Zeal Energy Systems and Recycles.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Architecture  
 
-### `npm run eject`
+### Components  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React (Frontend)** – Builds dynamic user interfaces.  
+- **Redux Toolkit** – Manages global application state.  
+- **Axios (via requestMethod.js)** – Handles API communication.  
+- **Dummy Data** – Supports frontend testing without backend dependencies.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Directory Structure  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```plaintext
+zcal-fronted-app/
+├── public/                  # Static assets
+├── src/
+│   ├── components/          # Reusable UI components
+│   ├── pages/               # Application pages (Home, Services, Products, Contact)
+│   ├── redux/               # Redux store and slices
+│   ├── App.css              # Global styles for App
+│   ├── App.js               # Main application component
+│   ├── dummyData.js         # Temporary mock data for testing
+│   ├── index.css            # Root CSS
+│   ├── index.js             # Application entry point
+│   └── requestMethod.js     # API configuration and request handling
+├── package.json             # Dependencies and scripts
+├── README.md                # Documentation
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Technologies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React (v18)** – Frontend framework  
+- **Redux Toolkit** – State management  
+- **Axios** – API requests  
+- **CSS3** – Styling and layout  
+- **JavaScript (ES6)** – Core logic and functionality  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Setup Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
+- **Node.js v18+**
+- **npm or yarn**
 
-### Analyzing the Bundle Size
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mixro/zcal-fronted-app
+   cd zcal-fronted-app
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. **Run the app:**
+   ```bash
+   npm start
+   ```
+   The app runs at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Core Features
 
-### Deployment
+- 📦 **Product Showcase** – Display imported and exported electrical tools and equipment.
+- ⚡ **Service Listings** – Highlight installation, servicing, and recycling solutions.
+- 🌍 **Sustainability Focus** – Promote Zeal’s recycling and eco-friendly initiatives.
+- 📊 **State Management** – Manage application data with Redux Toolkit.
+- 🔗 **API Ready** – Connect to backend services with a centralized request handler.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Dummy Data in dummyData.js** is provided for frontend UI testing.
+- For unit and integration tests (if added):
+  ```bash
+  npm test
+  ```
+
+
+## Deployment
+
+### Local
+```bash
+npm run build
+serve -s build
+```
+
+### Production
+- Deployable to:
+  - Vercel
+  - Netlify
+  - AWS Amplify
+  - Firebase Hosting
+
+
+## Future Improvements
+
+- 🔒 **Authentication system (user & admin dashboards).**
+- 🛠 **Product management with backend integration.**
+- 📈 **Analytics dashboards for business insights.**
+- 🌐 **Multi-language support.**
+- 📱 **Mobile-first enhancements for wider accessibility.**
+
+
+## Support
+
+For inquiries or support:\
+📧 Email: josephchongola43@gmail.com\
