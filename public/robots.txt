@@ -1,5 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://zeal-energy.netlify.app/sitemap.xml
+Sitemap: https://zeal.co.tz/sitemap.xml
